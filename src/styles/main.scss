@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+    &.active {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+
+  .meal-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h3 {
+      margin: 10px 0;
+    }
+  }
+}
